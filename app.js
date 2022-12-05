@@ -8,12 +8,6 @@ app.use(express.json());
 app.use(cors());
 app.use("/books", router) // localhost:5000/books
 
-app.use(express.static(path.join(__dirname, "/fron-end/build")));
-
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '/front-end/build', 'index.html'));
-});
-
 
 /* Click connect at Database Deployments page */
 mongoose.connect(
