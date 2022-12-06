@@ -11,7 +11,7 @@ app.use("/books", router) // localhost:5000/books
 
 /* Click connect at Database Deployments page */
 mongoose.connect(
-    "mongodb+srv://mernApp:p%40ssw0rd%279%27%21@mernbookstore.iwzp06a.mongodb.net/?retryWrites=true&w=majority"
+    "Your Mongo DB connector"
         )
         .then(()=>console.log("Connected to Datebase"))
         .then(() => {
