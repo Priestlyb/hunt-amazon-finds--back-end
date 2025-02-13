@@ -1,6 +1,6 @@
 #Sample Dockerfile for NodeJS Apps
 
-FROM node:20
+FROM node:20.8.0
 
 WORKDIR /app
 
