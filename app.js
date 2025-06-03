@@ -4,10 +4,14 @@ const authRoute = require("./routes/auth");
 const userRoute = require("./routes/users");
 const router = require("./routes/product-routes")
 const app = express();
-const cors = require("cors");
+const cors = require('cors');
+
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: 'https://huntamazonfinds.vercel.app',  // https://huntamazonfinds.vercel.app , http://localhost:3000
+  credentials: true, 
+}));
 app.use("/api/users", userRoute);
 app.use("/api/auth", authRoute);
 app.use("/products", router) // localhost:5000/books
